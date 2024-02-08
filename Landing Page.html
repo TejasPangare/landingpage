@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    
+    
+<link rel="stylesheet" href="./Landing Page_files/style.css"><link href="./Landing Page_files/remixicon.css" rel="stylesheet"></head>
+
+<body cz-shortcut-listen="true">
+    <div id="main">
+        <div id="circle" style="transform: translate(660px, 303px); margin: -0.5vw;"></div>
+        <div id="top">
+            <div id="top-overlay">
+                <div class="nav"></div>
+                <div class="text">
+                    <h1>brandName.</h1>
+                    <div class="text-right">
+                        <p>Ask a Question ?<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+                            distinctio.</p>
+                        <p>Become a member<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+                            distinctio.</p>
+                        <div class="icons">
+                            <a href="http://127.0.0.1:5500/index.html#"><i class="ri-instagram-fill"></i></a>
+                            <a href="http://127.0.0.1:5500/index.html#"><i class="ri-twitter-x-fill"></i></a>
+                            <a href="http://127.0.0.1:5500/index.html#"><i class="ri-facebook-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div class="b1 belm">
+                <h2>Top Collabs</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab tenetur facilis accusamus tempora facere fugiat laboriosam iusto, ipsam architecto molestias.</p>
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iste voluptates explicabo, incidunt vero totam, voluptatibus culpa qui alias eius quisquam magni voluptate accusantium tempora.</p>
+            </div>
+            <div class="b2 belm"></div>
+            <div class="b3 belm">
+                <div class="b3text"><h1>bestSELLER</h1><br><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fuga expedita et facere odio, animi saepe praesentium excepturi id quae.</p>
+                </div>
+            </div>
+            <div class="b4 belm">
+                <h5>Latest About US</h5>
+                <div class="notify"><div id="ppic"></div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aperiam!</p></div>
+                <div class="notify"><div id="ppic"></div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aperiam!</p></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var circle=document.querySelector("#circle")
+        window.addEventListener("mousemove",function (dets) {
+            circle.style.transform=`translate(${dets.clientX}px,${dets.clientY}px)`,
+            circle.style.margin="-.5vw"
+        })
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
